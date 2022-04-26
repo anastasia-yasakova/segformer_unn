@@ -16,7 +16,7 @@ for name, path in actual_files.items():
 	
 	actual = cv.imread(path)
 	expected = cv.imread(expected_files[name])
-	assert actual == expected
+	assert (actual == expected).all()
 
 print("Correct!")	
 
