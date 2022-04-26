@@ -9,6 +9,8 @@ actual_path = "segformer_unn/output/test_results"
 expected_files = {osp.splitext(osp.basename(f))[0]: f for f in glob.glob(osp.join(expected_path, "*.png"))}
 actual_files = {osp.splitext(osp.basename(f))[0]: f for f in glob.glob(osp.join(actual_path, "*.png"))}
 
+assert len(actual) > 0, "Files not found"
+
 for name, path in actual_files.items():
 	assert name in expected_files, "A file was found that is not expected"
 	
