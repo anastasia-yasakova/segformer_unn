@@ -3,8 +3,8 @@ import glob
 import os.path as osp
 
 
-expected_path = "segformer_unn/output/expected"
-actual_path = "segformer_unn/output/test_results"
+expected_path = "segformer_unn/assets/output/expected"
+actual_path = "segformer_unn/assets/output/test_results"
 
 expected_files = {osp.splitext(osp.basename(f))[0]: f for f in glob.glob(osp.join(expected_path, "*.png"))}
 actual_files = {osp.splitext(osp.basename(f))[0]: f for f in glob.glob(osp.join(actual_path, "*.png"))}

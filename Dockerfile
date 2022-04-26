@@ -23,7 +23,7 @@ RUN wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1
 
 RUN git clone https://github.com/anastasia-yasakova/segformer_unn.git
 
-CMD ["python3", "tools/infer.py", "--cfg", "segformer_unn/custom.yaml"]
+RUN python3 tools/infer.py --cfg segformer_unn/custom.yaml
 
 CMD ["python3", "segformer_unn/test_segformer.py"]
 
