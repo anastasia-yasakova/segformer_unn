@@ -13,11 +13,11 @@ WORKDIR ./segformer
 
 RUN pip install -r ./requirements.txt
 
+RUN git clone https://github.com/anastasia-yasakova/segformer_unn.git
+
 RUN wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1QK1qgaKOPAatx-DHNmv7Mu0S0cE1fHCN' -O hardnet70_cityscapes.pth
 
 RUN pip install torchvision
-
-RUN git clone https://github.com/anastasia-yasakova/segformer_unn.git
 
 RUN python3 tools/infer.py --cfg segformer_unn/custom.yaml
 
